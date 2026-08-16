@@ -77,6 +77,8 @@ export default function Home() {
       return;
     }
 
+    if (loading) return;
+
     setLoading(true);
     setError("");
     setCopied(false);
@@ -147,7 +149,7 @@ export default function Home() {
   return (
     <main className="min-h-screen overflow-x-hidden bg-gradient-to-b from-[#073d3b] via-[#020908] to-black text-white">
 
-      {/* Ambient Atrovirens Glow */}
+      {/* AMBIENT ATROVIRENS GLOW */}
 
       <div className="pointer-events-none absolute left-1/2 top-[-220px] h-[600px] w-[850px] max-w-[100vw] -translate-x-1/2 rounded-full bg-[#0f9f9c]/25 blur-[170px]" />
 
@@ -185,19 +187,31 @@ export default function Home() {
 
           <div className="hidden items-center gap-7 text-sm text-zinc-300 md:flex">
 
-            <a href="#home" className="transition hover:text-[#73e2dc]">
+            <a
+              href="#home"
+              className="transition hover:text-[#73e2dc]"
+            >
               Home
             </a>
 
-            <a href="#features" className="transition hover:text-[#73e2dc]">
+            <a
+              href="#features"
+              className="transition hover:text-[#73e2dc]"
+            >
               Features
             </a>
 
-            <a href="#how" className="transition hover:text-[#73e2dc]">
+            <a
+              href="#how"
+              className="transition hover:text-[#73e2dc]"
+            >
               How To Use
             </a>
 
-            <a href="#faq" className="transition hover:text-[#73e2dc]">
+            <a
+              href="#faq"
+              className="transition hover:text-[#73e2dc]"
+            >
               FAQ
             </a>
 
@@ -382,24 +396,22 @@ export default function Home() {
 
           </div>
 
-          {/* GENERATE */}
+          {/* GENERATE BUTTON — ONLY BEFORE RESULT */}
 
-          <button
-  type="button"
-  onClick={async () => {
-    if (loading) return;
+          {!reply && (
+            <button
+              type="button"
+              onClick={generateReply}
+              disabled={loading}
+              className="mt-6 w-full rounded-2xl bg-[#d9fffc] px-5 py-4 text-sm font-bold text-black shadow-xl shadow-[#0f9f9c]/10 transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {loading
+                ? "🤖 Generating Reply..."
+                : "✨ Generate Reply"}
+            </button>
+          )}
 
-    setReply("");
-    setError("");
-    setCopied(false);
-
-    await generateReply();
-  }}
-  disabled={loading}
-  className="mt-4 w-full rounded-xl border border-[#0f9f9c]/25 bg-[#0f9f9c]/5 px-5 py-3 text-xs font-semibold text-[#73e2dc] transition hover:border-[#0f9f9c]/50 hover:bg-[#0f9f9c]/10 disabled:cursor-not-allowed disabled:opacity-50"
->
-  {loading ? "🤖 Generating New Reply..." : "🔄 Regenerate Reply"}
-</button>
+          {/* CLEAR */}
 
           <button
             type="button"
@@ -456,13 +468,17 @@ export default function Home() {
 
               </div>
 
+              {/* REGENERATE — ONLY AFTER RESULT */}
+
               <button
                 type="button"
                 onClick={generateReply}
                 disabled={loading}
-                className="mt-4 w-full rounded-xl border border-[#0f9f9c]/20 bg-[#0f9f9c]/5 px-5 py-3 text-xs font-semibold text-[#73e2dc] transition hover:bg-[#0f9f9c]/10"
+                className="mt-4 w-full rounded-xl border border-[#0f9f9c]/20 bg-[#0f9f9c]/5 px-5 py-3 text-xs font-semibold text-[#73e2dc] transition hover:border-[#0f9f9c]/40 hover:bg-[#0f9f9c]/10 disabled:cursor-not-allowed disabled:opacity-50"
               >
-                🔄 Regenerate Reply
+                {loading
+                  ? "🤖 Generating New Reply..."
+                  : "🔄 Regenerate Reply"}
               </button>
 
             </div>
