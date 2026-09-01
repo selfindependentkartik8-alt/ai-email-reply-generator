@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aiemailreplygenerator.krishworks.com/sitemap.xml
+Sitemap: https://aiemailreplyngenerator.krishaiworks.com/sitemap.xml

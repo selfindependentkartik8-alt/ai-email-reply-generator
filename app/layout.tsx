@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    "https://aiemailreplygenerator.krishworks.com"
+    "https://aiemailreplyngenerator.krishaiworks.com"
   ),
 
   title: "AI Email Reply Generator | Write Professional Email Replies",
@@ -36,15 +36,14 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical:
-      "https://aiemailreplygenerator.krishworks.com/",
+      "https://aiemailreplyngenerator.krishaiworks.com/",
   },
 
   openGraph: {
-    title:
-      "AI Email Reply Generator | KrishAIWorks",
+    title: "AI Email Reply Generator | KrishAIWorks",
     description:
       "Generate professional and personalized email replies with AI in seconds.",
-    url: "https://aiemailreplygenerator.krishworks.com/",
+    url: "https://aiemailreplyngenerator.krishaiworks.com/",
     siteName: "KrishAIWorks",
     type: "website",
     locale: "en_US",
@@ -52,10 +51,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title:
-      "AI Email Reply Generator | KrishAIWorks",
+    title: "AI Email Reply Generator | KrishAIWorks",
     description:
-      "Create professional email replies quickly with AI.",
+      "Create professional email replies quickly and easily with AI.",
   },
 
   robots: {
