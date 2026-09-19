@@ -802,7 +802,7 @@ export default function Home() {
           </p>
 
         </a>
-<a
+        <a
   href="/privacy-policy"
   className="transition hover:text-violet-300"
 >
@@ -814,7 +814,8 @@ export default function Home() {
   className="transition hover:text-violet-300"
 >
   Terms & Conditions
-</a>
+</a> 
+
       </div>
 
     </div>
