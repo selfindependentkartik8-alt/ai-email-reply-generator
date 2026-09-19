@@ -802,19 +802,6 @@ export default function Home() {
           </p>
 
         </a>
-        <a
-  href="/privacy-policy"
-  className="transition hover:text-violet-300"
->
-  Privacy Policy
-</a>
-
-<a
-  href="/terms-and-conditions"
-  className="transition hover:text-violet-300"
->
-  Terms & Conditions
-</a> 
 
       </div>
 
@@ -855,6 +842,20 @@ export default function Home() {
         <p className="text-xs text-zinc-600">
           © {new Date().getFullYear()} KrishAIWorks. All rights reserved.
         </p>
+
+<a
+  href="/privacy-policy"
+  className="transition hover:text-violet-300"
+>
+  Privacy Policy
+</a>
+
+<a
+  href="/terms-and-conditions"
+  className="transition hover:text-violet-300"
+>
+  Terms & Conditions
+</a>
 
       </div>
 
