@@ -843,20 +843,6 @@ export default function Home() {
           © {new Date().getFullYear()} KrishAIWorks. All rights reserved.
         </p>
 
-<a
-  href="/privacy-policy"
-  className="transition hover:text-violet-300"
->
-  Privacy Policy
-</a>
-
-<a
-  href="/terms-and-conditions"
-  className="transition hover:text-violet-300"
->
-  Terms & Conditions
-</a>
-
       </div>
 
     </div>
